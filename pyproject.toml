@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "security-telemetry-detection-lab"
+version = "0.1.0"
+description = "Reproducible endpoint telemetry and detection evaluation lab"
+requires-python = ">=3.10"
+dependencies = ["PyYAML>=6.0", "matplotlib>=3.8"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+telemetry-lab = "telemetry_lab.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,13 @@
+# High-level example searches after importing normalized_events.jsonl
+
+# Encoded PowerShell
+event_type="process_create" process_name="powershell.exe" command_line="*Encoded*"
+
+# Remote interactive logons from non-RFC1918 sources
+event_type="authentication" logon_type=10
+
+# LSASS access
+event_type="process_access" target_process="lsass.exe"
+
+# Unusual outbound ports
+event_type="network_connect" NOT dst_port IN (53,80,123,443)

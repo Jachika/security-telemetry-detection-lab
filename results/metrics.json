@@ -1,0 +1,23 @@
+{
+  "events_processed": 120000,
+  "seed": 42,
+  "baseline": {
+    "tp": 1182,
+    "fp": 10150,
+    "tn": 108668,
+    "fn": 0,
+    "precision": 0.10430638898693964,
+    "recall": 1.0,
+    "false_positive_rate": 0.08542476729115117
+  },
+  "tuned": {
+    "tp": 1182,
+    "fp": 6799,
+    "tn": 112019,
+    "fn": 0,
+    "precision": 0.14810174163638642,
+    "recall": 1.0,
+    "false_positive_rate": 0.0572219697352253
+  },
+  "false_positive_reduction": 0.3301477832512315
+}

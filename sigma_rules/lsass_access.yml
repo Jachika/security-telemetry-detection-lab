@@ -1,0 +1,13 @@
+title: Suspicious LSASS Process Access
+id: DET-002
+status: experimental
+logsource:
+  category: process_access
+  product: windows
+detection:
+  selection:
+    TargetImage|endswith: '\lsass.exe'
+  condition: selection
+tags:
+  - attack.credential_access
+  - attack.t1003.001

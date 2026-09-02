@@ -1,0 +1,14 @@
+title: Encoded PowerShell
+id: DET-001
+status: experimental
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains: 'Encoded'
+  condition: selection
+tags:
+  - attack.execution
+  - attack.t1059.001
